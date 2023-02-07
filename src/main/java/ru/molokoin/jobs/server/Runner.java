@@ -7,7 +7,8 @@ package ru.molokoin.jobs.server;
 public class Runner {
     public static void main(String[] args) {
         System.out.println("Стартовало серверное приложение ...");
-        Face face = new Face();
+        //Запускаем консольный интерфейс
+        new Face();
         
     }
 }

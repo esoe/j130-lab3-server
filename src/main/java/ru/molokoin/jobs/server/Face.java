@@ -45,12 +45,12 @@ public class Face {
     }
     /**
      * Запуск сервера
+     * TODO запуск сервера надо реализовать в отдельном потоке, чтобы предотвратить блокирование доступа пользователя к интерфейсу
      * @param port
      */
     public void start(int port){
-        System.out.println("Запуск сервера на порту " + port + " ...");
-        Thread thread = new Thread(new Server(port));
-        thread.start();
+        System.out.println("Попытка запуска сервера на порту " + port + " ...");
+        new Server(port).start();//заблокирует работу интерфейса
         listen();
     }
     
